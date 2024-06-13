@@ -1,0 +1,23 @@
+[33mcommit a44f181488653b4341de0bc393f2291bebbeb151[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: hardcoding-0417 <hardcoding@dana-ai.com>
+Date:   Thu Jun 13 16:58:51 2024 +0900
+
+    api키 없앰
+
+[33mcommit 26508f7d28ceb18e5a2fbdd9ff8d59db24f47243[m
+Author: hardcoding-0417 <hardcoding@dana-ai.com>
+Date:   Thu Jun 13 16:53:42 2024 +0900
+
+    0.2에 맞게 수정 & 알기 쉽게 정리
+
+[33mcommit 6536a6247deae59c926de00d48382c4d1b021c65[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: hardcoding-0417 <hardcoding@dana-ai.com>
+Date:   Thu Jun 13 10:16:01 2024 +0900
+
+    first_commit
+
+[33mcommit f01f2889810b74165fc23cdab8e48b260d8ef27e[m
+Author: hardcoding-0417 <hardcoding@dana-ai.com>
+Date:   Thu Jun 13 10:12:18 2024 +0900
+
+    Initial commit
