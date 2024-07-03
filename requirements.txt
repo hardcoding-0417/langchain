@@ -10,3 +10,4 @@ langchainhub==0.1.20
 langsmith==0.1.77
 langchain_anthropic==0.1.15
 langgraph==0.0.66
+beautifulsoup4

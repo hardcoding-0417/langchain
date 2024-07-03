@@ -4,6 +4,9 @@ from langchain_openai import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 
+# 벡터 DB를 만들고 저장하는 예제입니다.
+# 유사도 검색 대신 llm을 사용하면 RAG가 됩니다.
+
 # OpenAI API 키 설정 (환경 변수를 통해 설정)
 os.environ["OPENAI_API_KEY"] = "APIkey"
 
@@ -33,7 +36,8 @@ docsearch = FAISS.from_texts(texts, embeddings)
 
 # 유사도 검색
 query = "양소유는 누구?"
-docs = docsearch.similarity_search_with_score(query, k=3) # 가장 유사한 것 4개를 반환하는 메서드. 하나만 반환하고 싶으면 k=1을 사용
+docs = docsearch.similarity_search_with_score(query, k=3) 
+# 가장 유사한 것 4개를 반환하는 메서드. 하나만 반환하고 싶으면 k=1을 사용
 
 for doc, score in docs:
     print(f"Similarity score: {score}")

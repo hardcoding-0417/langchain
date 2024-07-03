@@ -5,10 +5,13 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_core.documents import Document
 
+# 웹 페이지를 받아온 뒤, 해당 데이터를 llm에 넣어서
+# 대답할 때 참조하도록 하는 예제입니다.
+
 # OpenAI API 키 설정
 os.environ["OPENAI_API_KEY"] = "APIkey"
 
-# 웹 문서 읽기 함수 정의
+# 웹 문서 읽기 함수
 def custom_web_loader(url):
     html_doc = requests.get(url)
     soup = BeautifulSoup(html_doc.text, 'html.parser')
@@ -22,7 +25,6 @@ def custom_web_loader(url):
 # 특정 URL에서 데이터 로드
 url = "https://news.naver.com/section/105"
 text_list = custom_web_loader(url)
-
 
 # 리스트를 문자열로 변환하여 Document 객체 생성
 documents = [Document(page_content=text, metadata={"source": url}) for text in text_list]
