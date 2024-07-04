@@ -24,9 +24,14 @@ from PIL import Image
 st.set_page_config(page_title="이메일 전송 서비스입니다.", page_icon=":robot:", layout="wide") # layout의 인자를 centereds나 wide로 다르게 해보세요.
 st.header("이메일 전송기")
 
-# 대문 이미지 띄우기
+# 대문에 붙일 이미지 로드
 image = Image.open("header_image.jpg")
-st.image(image, use_column_width=True)
+
+# 크기 조정
+width = 600
+height = 200
+image = image.resize((width, height)) # Crop도 해보세요
+st.image(image, width=width)
 
 # 사용자로부터 이메일 입력 받기
 def getEmail():
